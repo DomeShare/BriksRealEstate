@@ -1,0 +1,195 @@
+.about-us {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    color: #00f2ff;
+    margin-bottom: 20px;
+    animation: slideDown 1s ease forwards;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #bbb;
+    animation: fadeIn 1.5s ease;
+}
+
+.company-name {
+    color: #00f2ff;
+    font-weight: bold;
+}
+
+.btn-contact {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 30px;
+    background: transparent;
+    border: 2px solid #00f2ff;
+    color: #00f2ff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-contact:hover {
+    background: #00f2ff;
+    color: #000;
+}
+
+.testimonials {
+    background: #0a0a0a;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 3rem;
+    color: #00f2ff;
+    margin-bottom: 50px;
+}
+
+.testimonial-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.testimonial {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #00f2ff;
+}
+
+.testimonial-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.testimonial h4 {
+    font-size: 1.5rem;
+    color: #00f2ff;
+    font-weight: bold;
+}
+
+
+.contact-us {
+    background-color: #0a0a0a;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 3rem;
+    color: #00f2ff;
+    margin-bottom: 40px;
+}
+
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border: 2px solid #00f2ff;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #00f2ff;
+    color: #0a0a0a;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #0099cc;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}

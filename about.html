@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+    <section class="about-us" id="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>At <span class="company-name">Briks</span>, we are dedicated to helping you find the perfect
+                property. With years of expertise, a trusted network, and a passion for real estate, we make buying,
+                selling, and investing in properties simple and secure.</p>
+            <p>Our mission is to deliver transparent, smooth, and professional real estate experiences that exceed
+                client expectations.</p>
+            <a href="contacts.html" target="_blank" class="btn-contact">Contact Us</a>
+        </div>
+
+        <section class="testimonials" id="testimonials">
+            <h2 class="section-heading">What Our Clients Say</h2>
+
+            <div class="testimonial-container">
+                <div class="testimonial-slide">
+                    <div class="testimonial">
+                        <div class="testimonial-img">
+                            <img src="client1.jpg" alt="Client 1">
+                        </div>
+                        <p>🏡 "DreamLand helped me find my dream home with zero hassle. Super professional and friendly
+                            team!"</p>
+                        <h4>- Aditi Sharma</h4>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-img">
+                            <img src="client2.jpg" alt="Client 2">
+                        </div>
+                        <p>🏢 "They made the process of selling my property smooth and fast. Highly recommended!"</p>
+                        <h4>- Rajeev Mehta</h4>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-img">
+                            <img src="client3.jpg" alt="Client 3">
+                        </div>
+                        <p>🏘️ "Best experience ever! Genuine advice and great support throughout my property buying
+                            journey."</p>
+                        <h4>- Priya Verma</h4>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-img">
+                            <img src="client4.jpg" alt="Client 4">
+                        </div>
+                        <p>🏙️ "Quick response, professional approach, and amazing property options. Loved the service!"
+                        </p>
+                        <h4>- Kunal Rathore</h4>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-img">
+                            <img src="client5.jpg" alt="Client 5">
+                        </div>
+                        <p>🏠 "I found my dream apartment thanks to DreamLand. Truly a delightful experience."</p>
+                        <h4>- Sneha Kapoor</h4>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-img">
+                            <img src="client6.jpg" alt="Client 6">
+                        </div>
+                        <p>🏢 "Selling my commercial space was made super easy and quick. Thank you DreamLand Team!"</p>
+                        <h4>- Arjun Mehra</h4>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-img">
+                            <img src="client7.jpg" alt="Client 7">
+                        </div>
+                        <p>🏡 "Excellent service, timely support, and smooth paperwork. Highly trustworthy team!"</p>
+                        <h4>- Riya Singh</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <script>
+            let slideIndex = 0;
+            const slides = document.querySelector('.testimonial-slide');
+            const totalSlides = document.querySelectorAll('.testimonial').length;
+
+            function showNextSlide() {
+                slideIndex++;
+                if (slideIndex >= totalSlides) {
+                    slideIndex = 0;
+                }
+                slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+            }
+
+            setInterval(showNextSlide, 4000); // Change slide every 4 seconds
+
+
+        </script>
+</body>
+
+</html>

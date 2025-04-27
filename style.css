@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    font-family: 'Montserrat', sans-serif;
+    color: #eee;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background: #1e1e1e;
+    position: relative;
+}
+
+/* Left Sign In Button */
+.sign-in-left {
+    display: flex;
+    align-items: center;
+}
+
+.sign-in-btn {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #00f2ff;
+    border-radius: 30px;
+    color: #00f2ff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background: #00f2ff;
+    color: #121212;
+    transform: scale(1.05);
+}
+
+/* Center: Logo + Company Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+    /* Adjust the size of the logo */
+    height: 40px;
+    border-radius: 20%;
+}
+
+.company-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00f2ff;
+}
+
+/* Right Navbar (Hamburger Menu) */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    background: #eee;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Links (Dropdown) */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.nav-links li {
+    list-style: none;
+    border-bottom: 1px solid #333;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 15px 20px;
+    color: #eee;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    background: #00f2ff;
+    color: #121212;
+}
+
+/* Active State */
+.nav-links.active {
+    display: flex;
+
+    /* Hamburger Menu Animation */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+
+/* Custom Hamburger Menu Animation */
+.menu-toggle {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    background: #eee;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animation for active state (X icon) */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hero Section with Background (updated) */
+.hero-section {
+    width: 100%;
+    min-height: 400px;
+    /* smaller height */
+    background: url('\images/bg.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Dark overlay on image */
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.7);
+    /* Dark effect */
+    z-index: 1;
+}
+
+/* Content inside hero section */
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    /* to stay above the dark overlay */
+}
+
+/* Properties Button (no changes) */
+.properties-btn {
+    padding: 15px 30px;
+    background-color: #00f2ff;
+    color: #121212;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.properties-btn:hover {
+    background-color: transparent;
+    color: #00f2ff;
+    border: 2px solid #00f2ff;
+    transform: scale(1.1);
+}
+
+/* Search Section */
+.search-section {
+    width: 100%;
+    background: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    margin-top: -50px;
+    /* Pulls it up slightly to look attached */
+    z-index: 5;
+    position: relative;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    background: #121212;
+    border: 2px solid #00f2ff;
+    border-radius: 50px;
+    overflow: hidden;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+}
+
+/* Search Input */
+.search-input {
+    flex: 1;
+    padding: 15px 20px;
+    background: transparent;
+    border: none;
+    color: #eee;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Search Button */
+.search-btn {
+    padding: 15px 30px;
+    background: #00f2ff;
+    color: #121212;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* Hover & Focus Effects */
+.search-btn:hover {
+    background: transparent;
+    color: #00f2ff;
+    border-left: 2px solid #00f2ff;
+}
+
+.search-input:focus {
+    background: #1e1e1e;
+}
+
+
+/* Featured Section */
+.featured-section {
+    width: 100%;
+    background: #121212;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Wrapper */
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Main Property Card */
+.property-card {
+    width: 300px;
+    height: 400px;
+    background: #1e1e1e;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+    transition: all 0.4s ease;
+}
+
+/* Background Image */
+.property-bg {
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+/* Hover Effect */
+.property-card:hover .property-bg {
+    transform: scale(1.1);
+}
+
+/* Bottom Info Card */
+.property-details {
+    width: 90%;
+    background: #1e1e1e;
+    border: 2px solid #00f2ff;
+    border-radius: 15px;
+    padding: 50px 15px 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+/* Circle Logo */
+.logo-circle {
+    width: 60px;
+    height: 60px;
+    background: #121212;
+    border: 2px solid #00f2ff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text Info */
+.property-details h3 {
+    color: #00f2ff;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.property-details p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.property-details h4 {
+    color: #fff;
+    font-size: 1rem;
+}
+
+
+/* Main Property Card */
+.property-card {
+    width: 300px;
+    height: 400px;
+    background: #1e1e1e;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+/* Background Image Hover Zoom */
+.property-bg {
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+/* Hover Effect: Image Zoom */
+.property-card:hover .property-bg {
+    transform: scale(1.1);
+}
+
+/* Bottom Info Card */
+.property-details {
+    width: 90%;
+    background: #1e1e1e;
+    border: 2px solid #00f2ff;
+    border-radius: 15px;
+    padding: 50px 15px 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect: Move Info Card Up */
+.property-card:hover .property-details {
+    transform: translateX(-50%) translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.5);
+}
+
+/* Circle Logo */
+.logo-circle {
+    width: 60px;
+    height: 60px;
+    background: #121212;
+    border: 2px solid #00f2ff;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect: Circle Logo Grow */
+.property-card:hover .logo-circle {
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Text Info */
+.property-details h3 {
+    color: #00f2ff;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.property-details p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.property-details h4 {
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Section Heading */
+.section-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #00f2ff;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Add a background or gradient effect above the heading */
+.featured-section {
+    position: relative;
+    padding-top: 80px;
+    /* Space above the heading */
+}
+
+
+/* Contact Button Wrapper */
+.contact-btn-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Simple Contact Us Button */
+.contact-us-simple-btn {
+    background: transparent;
+    color: #00f2ff;
+    padding: 12px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid #00f2ff;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Span (text) always above */
+.contact-us-simple-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fill Animation on Hover */
+.contact-us-simple-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #00f2ff;
+    z-index: 1;
+    transition: width 0.4s ease;
+}
+
+/* On Hover */
+.contact-us-simple-btn:hover::before {
+    width: 100%;
+}
+
+.contact-us-simple-btn:hover span {
+    color: #121212;
+    /* Dark text color after hover */
+}
